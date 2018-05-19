@@ -1,0 +1,103 @@
+html {
+ height: 100%;
+ width: 100%;
+ margin: 0;
+ padding: 0;
+}
+body {
+ width: 100%;
+ background: linear-gradient(#7FB641, #263B26);
+ margin: 0;
+ padding: 0;
+}
+.footer {
+ position: fixed;
+ bottom: 0;
+}
+.content-wrapper {
+ display: flex;
+ justify-content: space-around;
+ margin-top: 10%;
+ text-align: right;
+}
+h1, h2, h3, h4, h5, h6, p {
+ color: white;
+ font-family: 'Geometric415';
+ margin: 0;
+}
+@font-face {
+ font-family: 'Geometric415';
+ src: url("./fonts/Geometric415BT-LiteA.ttf") format("truetype"), 
+ url("./fonts//Geometric415BT-LiteA.woff")  format("woff");
+}
+#body-left {
+ text-align: center;
+}
+a {
+ text-decoration: none;
+}
+a:hover {
+ text-decoration: none;
+}
+.mower {
+ z-index: -50;
+ position: fixed;
+ right: 26%;
+ bottom: 17%;
+ height: 30%;
+}
+.grass {
+ width: 100%;
+}
+@media(max-width: 1280px) {
+ .mower {
+  bottom: 13%;
+ }
+}
+@media(max-width: 1140px) {
+ .mower {
+  bottom: 13%;
+ }
+}
+@media(max-width: 1080px) {
+ .mower {
+  bottom: 11%;
+ }
+}
+@media(max-width: 900px) {
+ .mower {
+  height: 20%;
+  bottom: 9%;
+ }
+}
+@media(max-width: 800px) {
+ .mower {
+  height: 20%;
+  bottom: 11%;
+  right: 5%;
+ }
+ .grass {
+  width: 150%;
+ }
+@media(max-width: 700px) {
+ .mower {
+  bottom: 9%;
+ }
+ .content-wrapper {
+  flex-direction: column;
+  align-items: center;
+ }
+ #body-right {
+  margin-top: 10%;
+  text-align: center;
+ }
+@media(max-width: 500px) {
+ .mower {
+  display: none;
+ }
+ .grass {
+  width: 240%;
+ }
+}
+}
+}

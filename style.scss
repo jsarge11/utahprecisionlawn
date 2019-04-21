@@ -1,0 +1,99 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  background: linear-gradient(#7fb641, #263b26);
+  margin: 0;
+  padding: 0;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+}
+.content-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10%;
+  text-align: right;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: white;
+  font-family: "Geometric415";
+  margin: 0;
+}
+@font-face {
+  font-family: "Geometric415";
+  src: url("./fonts/Geometric415BT-LiteA.ttf") format("truetype"),
+    url("./fonts//Geometric415BT-LiteA.woff") format("woff");
+}
+#body-left {
+  text-align: center;
+}
+
+#body-right {
+  @media (max-width: 700px) {
+    margin-top: 10%;
+    text-align: center;
+  }
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@keyframes mower-move {
+    0% {
+        left: -20%
+    }
+    100% {
+        left: 100%
+    }
+}
+.mower {
+  z-index: -50;
+  position: fixed;
+  right: 26%;
+  bottom: 100px;
+  height: 30%;
+  animation-name: mower-move;
+  animation: mower-move 10s infinite linear;
+  @media (max-width: 700px) {
+    height: 20%;
+    bottom: 65px;
+    animation: mower-move 8s infinite linear;
+  }
+
+  @media (max-width: 500px) {
+      height: 10%;
+      bottom: 45px;
+      animation: mower-move 6s infinite linear;
+  }
+}
+
+.grass {
+    height: 500px;
+
+    @media (max-width: 700px) {
+        height: 300px;
+    }
+    @media (max-width: 500px) {
+        height: 200px;
+    }
+}

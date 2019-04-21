@@ -1,0 +1,23 @@
+{
+  "name": "utahprecisionlawn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass style.scss style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsarge11/utahprecisionlawn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsarge11/utahprecisionlawn/issues"
+  },
+  "homepage": "https://github.com/jsarge11/utahprecisionlawn#readme",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

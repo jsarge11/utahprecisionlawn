@@ -1,103 +1,87 @@
 html {
- height: 100%;
- width: 100%;
- margin: 0;
- padding: 0;
-}
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
 body {
- width: 100%;
- background: linear-gradient(#7FB641, #263B26);
- margin: 0;
- padding: 0;
-}
+  width: 100%;
+  background: linear-gradient(#7fb641, #263b26);
+  margin: 0;
+  padding: 0; }
+
 .footer {
- position: fixed;
- bottom: 0;
-}
+  position: fixed;
+  bottom: 0; }
+
 .content-wrapper {
- display: flex;
- justify-content: space-around;
- margin-top: 10%;
- text-align: right;
-}
-h1, h2, h3, h4, h5, h6, p {
- color: white;
- font-family: 'Geometric415';
- margin: 0;
-}
-@font-face {
- font-family: 'Geometric415';
- src: url("./fonts/Geometric415BT-LiteA.ttf") format("truetype"), 
- url("./fonts//Geometric415BT-LiteA.woff")  format("woff");
-}
-#body-left {
- text-align: center;
-}
-a {
- text-decoration: none;
-}
-a:hover {
- text-decoration: none;
-}
-.mower {
- z-index: -50;
- position: fixed;
- right: 26%;
- bottom: 17%;
- height: 30%;
-}
-.grass {
- width: 100%;
-}
-@media(max-width: 1280px) {
- .mower {
-  bottom: 13%;
- }
-}
-@media(max-width: 1140px) {
- .mower {
-  bottom: 13%;
- }
-}
-@media(max-width: 1080px) {
- .mower {
-  bottom: 11%;
- }
-}
-@media(max-width: 900px) {
- .mower {
-  height: 20%;
-  bottom: 9%;
- }
-}
-@media(max-width: 800px) {
- .mower {
-  height: 20%;
-  bottom: 11%;
-  right: 5%;
- }
- .grass {
-  width: 150%;
- }
-@media(max-width: 700px) {
- .mower {
-  bottom: 9%;
- }
- .content-wrapper {
-  flex-direction: column;
-  align-items: center;
- }
- #body-right {
+  display: flex;
+  justify-content: space-around;
   margin-top: 10%;
-  text-align: center;
- }
-@media(max-width: 500px) {
- .mower {
-  display: none;
- }
- .grass {
-  width: 240%;
- }
-}
-}
-}
+  text-align: right; }
+  @media (max-width: 700px) {
+    .content-wrapper {
+      flex-direction: column;
+      align-items: center; } }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: white;
+  font-family: "Geometric415";
+  margin: 0; }
+
+@font-face {
+  font-family: "Geometric415";
+  src: url("./fonts/Geometric415BT-LiteA.ttf") format("truetype"), url("./fonts//Geometric415BT-LiteA.woff") format("woff"); }
+
+#body-left {
+  text-align: center; }
+
+@media (max-width: 700px) {
+  #body-right {
+    margin-top: 10%;
+    text-align: center; } }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
+
+@keyframes mower-move {
+  0% {
+    left: -20%; }
+  100% {
+    left: 100%; } }
+
+.mower {
+  z-index: -50;
+  position: fixed;
+  right: 26%;
+  bottom: 100px;
+  height: 30%;
+  animation-name: mower-move;
+  animation: mower-move 10s infinite linear; }
+  @media (max-width: 700px) {
+    .mower {
+      height: 20%;
+      bottom: 65px;
+      animation: mower-move 8s infinite linear; } }
+  @media (max-width: 500px) {
+    .mower {
+      height: 10%;
+      bottom: 45px;
+      animation: mower-move 6s infinite linear; } }
+
+.grass {
+  height: 500px; }
+  @media (max-width: 700px) {
+    .grass {
+      height: 300px; } }
+  @media (max-width: 500px) {
+    .grass {
+      height: 200px; } }
